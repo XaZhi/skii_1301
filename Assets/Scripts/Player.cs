@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private float ForcePower;
+    private float forcePower;
 
     [SerializeField]
     private Rigidbody rb;
@@ -18,9 +18,7 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private int hp;
-    public int Hp { get { return hp; } set { hp = value; } }
-
-    public object HP { get; internal set; }
+    public int HP { get { return hp; } set { hp = value; } }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +27,6 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         MoveLeftOrRight();
@@ -38,6 +35,6 @@ public class Player : MonoBehaviour
     private void MoveLeftOrRight()
     {
         moveValue = moveAction.ReadValue<Vector2>();
-        rb.AddForce(moveValue.x * Vector3.right * ForcePower);
+        rb.AddForce(moveValue.x * Vector3.right * forcePower);
     }
 }

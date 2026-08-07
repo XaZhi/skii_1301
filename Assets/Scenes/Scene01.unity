@@ -1976,7 +1976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455caa57ec8b2234c9564abc6e952ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  ForcePower: 5
+  forcePower: 5
   rb: {fileID: 0}
   point: 0
   hp: 100

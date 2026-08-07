@@ -25,12 +25,12 @@ public class Tree : MonoBehaviour
         if (player == null)
             return;
 
-        player.Hp -= 15;
+        player.HP -= 15;
         UIManager.instance.ShowNotiText($"Hurt -15\nHP: {player.HP}");
 
-        if (player.Hp <= 0)
+        if (player.HP <= 0)
         {
-            player.Hp = 0;
+            player.HP = 0;
             UIManager.instance.ShowNotiText($"You are dead!!!!\nPoint: {player.Point}");
         }
     }
